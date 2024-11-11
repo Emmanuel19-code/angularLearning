@@ -1,0 +1,50 @@
+<nav class=" bg-blue-300 cursor-pointer shadow-md">
+  <div class="flex flex-row p-2 items-center justify-between">
+    <!-- Reduced padding here -->
+    <!-- Left Navigation Menu -->
+    <div class="w-full">
+      <ul
+        class="font-medium flex flex-col p-2 md:p-0 mt-2 border border-gray-100 rounded-lg md:flex-row md:space-x-3 rtl:space-x-reverse md:mt-0 md:border-0"
+      >
+        <!-- Reduced padding here -->
+        <li>
+          <a
+            routerLink="/dashboard"
+            class="block py-1 px-3 text-white bg-blue-700 rounded-lg md:bg-transparent md:text-blue-700 md:p-2 md:transition-all md:hover:text-blue-800 transition-all"
+            aria-current="page"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/employee"
+            class="block py-1 px-3 text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-2 md:transition-all"
+            >Employee</a
+          >
+        </li>
+        <li>
+          <a
+            routerLink="/leave-request"
+            class="block py-1 px-3 text-gray-900 rounded-md hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-2 md:transition-all"
+            >Leave Request</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right side user section -->
+    <div class="flex flex-row items-center cursor-pointer space-x-3">
+      <!-- Reduced space between elements -->
+      <p class="m-0 text-sm font-medium text-gray-700">
+        Welcome, <span class="font-semibold">Emmanuel</span>
+      </p>
+      <button
+        (click)="onLogOut()"
+        class="px-3 py-1.5 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-all"
+      >
+        LogOut
+      </button>
+      <!-- Reduced padding here -->
+    </div>
+  </div>
+</nav>
