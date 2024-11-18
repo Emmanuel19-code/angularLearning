@@ -1,1 +1,37 @@
-<p>employee works!</p>
+<div class="flex flex-col items-start justify-between p-4 space-y-6">
+    <!-- Table Section -->
+    <div class="relative overflow-x-auto w-full shadow-lg rounded-lg bg-white">
+      <div class="p-4 flex justify-end">
+        <button
+          (click)="toggleForm()"
+          type="button"
+          class="text-white w-36 bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm px-4 py-2 md:me-2 mb-2"
+        >
+          New Employee
+        </button>
+      </div>
+      <table class="w-full text-sm text-left text-gray-600">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+          <tr>
+            <th scope="col" class="px-6 py-3">Employee ID</th>
+            <th scope="col" class="px-6 py-3">Employee Name</th>
+            <th scope="col" class="px-6 py-3">Contact</th>
+            <th scope="col" class="px-6 py-3">Email</th>
+            <th scope="col" class="px-6 py-3">Department</th>
+            <th scope="col" class="px-6 py-3">Role</th>
+            <th class="px-6 py-3">Gender</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic Table Rows will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Form Section -->
+     <div class=" w-full" >
+        <app-employee-form *ngIf="showForm" [childFunction]="closeForm"></app-employee-form>
+     </div>
+    
+  
+  </div>

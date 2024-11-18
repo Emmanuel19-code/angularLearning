@@ -1,0 +1,140 @@
+<form
+  class="shadow-lg p-8 flex flex-col bg-white rounded"
+  (ngSubmit)="submitForm()"
+>
+  <!-- Close Button -->
+  <div class="p-2 flex justify-end">
+    <button
+      (click)="childFunction()"
+      type="button"
+      class="text-white bg-red-600 hover:bg-red-700 font-medium rounded-lg text-sm px-4 py-2 mb-4"
+    >
+      Close
+    </button>
+  </div>
+
+  <!-- Form Fields -->
+  <div class="grid gap-6 mb-6 md:grid-cols-2">
+    <!-- First Name -->
+    <div>
+      <label
+        for="first_name"
+        class="block mb-2 text-sm font-medium text-gray-900"
+        >First Name</label
+      >
+      <input
+        type="text"
+        [(ngModel)]="firstName"
+        name="firstName"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+        placeholder="John"
+        required
+      />
+    </div>
+
+    <!-- Last Name -->
+    <div>
+      <label
+        for="last_name"
+        class="block mb-2 text-sm font-medium text-gray-900"
+        >Last Name</label
+      >
+      <input
+        type="text"
+        [(ngModel)]="lastName"
+        name="lastName"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+        placeholder="Doe"
+        required
+      />
+    </div>
+
+    <!-- Department -->
+    <div>
+      <label
+        for="department"
+        class="block mb-2 text-sm font-medium text-gray-900"
+        >Department</label
+      >
+      <input
+        type="text"
+        [(ngModel)]="department"
+        name="department"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+        placeholder="HR"
+        required
+      />
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label for="phone" class="block mb-2 text-sm font-medium text-gray-900"
+        >Phone Number</label
+      >
+      <input
+        type="tel"
+        [(ngModel)]="phone"
+        name="phone"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+        placeholder="123-45-678"
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        required
+      />
+    </div>
+
+    <!-- Gender -->
+    <div>
+      <label for="gender" class="block mb-2 text-sm font-medium text-gray-900"
+        >Gender</label
+      >
+      <select
+        [(ngModel)]="gender"
+        name="gender"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-full p-2.5"
+      >
+        <option selected>Choose Gender</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="mb-6">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900"
+      >Email Address</label
+    >
+    <input
+      type="email"
+      [(ngModel)]="email"
+      name="email"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="john.doe@company.com"
+      required
+    />
+  </div>
+
+  <!-- Password -->
+  <div class="mb-6">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900"
+      >Password</label
+    >
+    <input
+      type="password"
+      name="password"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+      placeholder="•••••••••"
+      required
+    />
+  </div>
+
+  <!-- Submit Button -->
+  <div class="w-full p-2">
+    <button
+      type="submit"
+      class="text-white bg-blue-600 hover:bg-blue-700 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+    >
+      Submit
+    </button>
+  </div>
+</form>
